@@ -18,9 +18,5 @@ async def ping(ctx):
     await ctx.send('pong')
 
 
-@bot.command()
-async def ｐｉｎｇ(ctx):
-    await ctx.send('ｐｏｎｇ')
-
 
 bot.run(token)
