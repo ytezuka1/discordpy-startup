@@ -18,5 +18,9 @@ async def ping(ctx):
     await ctx.send('pong')
 
 
+@bot.command()
+async def sfen(ctx):
+    await ctx.send('.81 sfen ...')
 
+    
 bot.run(token)
