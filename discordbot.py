@@ -23,9 +23,9 @@ async def ping(ctx):
 #    await ctx.send('!hello')
 
 
-@bot.command()
-async def s(ctx, arg1, arg2):
-    await ctx.send('.81 sfen ...' && arg1 && arg2)
+#@bot.command()
+#async def s(ctx, arg1, arg2):
+#    await ctx.send('.81 sfen ...' && arg1 && arg2)
 
     
 bot.run(token)
