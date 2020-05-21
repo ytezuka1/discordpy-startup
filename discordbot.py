@@ -19,6 +19,11 @@ async def ping(ctx):
 
 
 @bot.command()
+async def hello(ctx):
+    await ctx.send('!hello')
+
+
+@bot.command()
 async def sfen(ctx):
     await ctx.send('.81 sfen ...')
 
