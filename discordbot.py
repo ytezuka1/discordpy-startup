@@ -24,8 +24,8 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
-async def s(ctx, arg):
-    await ctx.send('.81 sfen ...' && arg)
+async def s(ctx):
+    await ctx.send('.81 sfen ...')
 
     
 bot.run(token)
