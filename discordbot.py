@@ -25,7 +25,17 @@ async def ping(ctx):
 
 @bot.command()
 async def s(ctx, arg1, arg2):
-    await ctx.send('.81 sfen ...' + arg1 + arg2)
+    chars = list(arg1)
+    result1 = ''
+    for c in chars:
+        result1 = result1 + c
+        
+    result2 = ''
+    chars = list(arg2)
+    for c in chars:
+        result2 = result2 + c
+        
+    await ctx.send('.81 sfen ...' + result1 + ' b ' + result2 + '1')
 
     
 bot.run(token)
