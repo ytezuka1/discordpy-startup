@@ -53,8 +53,10 @@ async def s(ctx, *args):
             result2 += c
     
     for k, v in unit_surplus.items():
-        if v > 0:
+        if v > 1:
             result2 += str(v) + k.lower()
+        elif v = 1:
+            result2 += k.lower()
     
     await ctx.send('.81 sfen ' + result1 + ' b ' + result2 + ' 1')
     
