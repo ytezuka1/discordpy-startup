@@ -43,7 +43,7 @@ async def s(ctx, arg1, arg2):
     
     result3 = ''
     for u in unit_surplus:
-        result3 = result3 + u + ','
+        result3 = result3 + u + ':' + unit_surplus[u] + ','
         
     await ctx.send(result3)
     
