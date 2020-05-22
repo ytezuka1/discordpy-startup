@@ -65,5 +65,6 @@ async def s(ctx, *args):
     #    result3 += k + ':' + str(v) + ','
     #    
     #await ctx.send(result3)
+    await ctx.send('len(args): ' + str(len(args)))
     
 bot.run(token)
