@@ -60,10 +60,10 @@ async def s(ctx, *args):
     
     await ctx.send('.81 sfen ' + result1 + ' b ' + result2 + ' 1')
     
-    result3 = ''
-    for k, v in unit_surplus.items():
-        result3 += k + ':' + str(v) + ','
-        
-    await ctx.send(result3)
+    #result3 = ''
+    #for k, v in unit_surplus.items():
+    #    result3 += k + ':' + str(v) + ','
+    #    
+    #await ctx.send(result3)
     
 bot.run(token)
