@@ -39,7 +39,10 @@ async def s(ctx, *args):
     result2 = ''
     chars = list(args[1])
     for c in chars:
-        result2 += c
+        x = c.upper()
+        if x in unit_surplus:
+            unit_surplus[x] -= 1
+        result2 += x
     
     for k, v in unit_surplus.items():
         if v > 0:
