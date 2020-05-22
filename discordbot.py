@@ -29,6 +29,7 @@ async def s(ctx, *args):
     
     chars = list(args[0])
     result1 = ''
+    x = ''
     for c in chars:
         if c in unit_surplus:
             x = c.upper()
