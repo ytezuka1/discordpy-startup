@@ -24,6 +24,14 @@ async def ping(ctx):
 
 
 @bot.command()
+async def s(ctx):
+    await ctx.send('error no arg')
+
+@bot.command()
+async def s(ctx, arg1):
+    await ctx.send('error no arg2')
+
+@bot.command()
 async def s(ctx, arg1, arg2):
     unit_surplus = {'R':2, 'B':2, 'G':4, 'S':4, 'N':4, 'L':4, 'P':18}   #飛車、角行、金将、銀将、桂馬、香車、歩兵
     
@@ -31,9 +39,9 @@ async def s(ctx, arg1, arg2):
     result1 = ''
     for c in chars:
         if c in unit_surplus:
-            k = c.upper()
-            unit_surplus[k] -= 1
-        result1 += k
+            x = c.upper()
+            unit_surplus[x] -= 1
+        result1 += x
         
     result2 = ''
     chars = list(arg2)
