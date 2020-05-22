@@ -31,7 +31,8 @@ async def s(ctx, arg1, arg2):
     result1 = ''
     for c in chars:
         if c in unit_surplus:
-            unit_surplus[c.upper()] -= 1
+            k = c.upper()
+            unit_surplus[k] -= 1
         result1 += c
         
     result2 = ''
