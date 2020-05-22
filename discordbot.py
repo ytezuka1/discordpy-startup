@@ -46,7 +46,7 @@ async def s(ctx, *args):
             
             x = c.upper()
             if x in unit_surplus:
-                if d = '':
+                if not d:
                     d = '1'
                 unit_surplus[x] -= int(d)
                 d = ''
