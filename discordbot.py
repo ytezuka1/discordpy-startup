@@ -39,11 +39,11 @@ async def s(ctx, arg1, arg2):
     for c in chars:
         result2 = result2 + c
         
-    await ctx.send('.81 sfen ...' + result1 + ' b ' + result2 + '1')
+    await ctx.send('.81 sfen ...' + result1 + ' b ' + result2 + ' 1')
     
     result3 = ''
-    for u in unit_surplus:
-        result3 = result3 + u + ':' + unit_surplus[u] + ','
+    for k, v in unit_surplus.items():
+        result3 = result3 + k + ':' + v + ','
         
     await ctx.send(result3)
     
