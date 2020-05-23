@@ -35,7 +35,7 @@ async def s(ctx, *args):
     for c in chars:
         if c == '/':
             if columns > 1:
-                result1 += columns
+                result1 += str(columns)
             columns = 9
             rows -= 1
         x = c.upper()
