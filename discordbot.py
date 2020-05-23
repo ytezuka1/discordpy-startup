@@ -40,9 +40,8 @@ async def s(ctx, *args):
         result1 += c
     
     if columns > 1: result1 += str(columns)
-    
     if rows > 0: result1 += '/9' * rows
-        
+    
     result2 = ''
     d = ''
     if len(args) > 1:
