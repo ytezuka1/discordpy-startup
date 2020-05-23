@@ -30,12 +30,23 @@ async def s(ctx, *args):
     chars = list(args[0])
     result1 = ''
     x = ''
+    columns = 9
+    rows = 8
     for c in chars:
+        if c == '/':
+            if columns > 1:
+                result1 += columns
+            columns = 9
+            rows -= 1
         x = c.upper()
         if x in unit_surplus:
             unit_surplus[x] -= 1
+            columns -= 1
         result1 += c
     
+    if rows > 0:
+        result1 += '/9' * rows
+        
     result2 = ''
     d = ''
     if len(args) > 1:
