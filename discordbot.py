@@ -39,6 +39,7 @@ async def s(ctx, *args):
     result2 = ''
     d = ''
     if len(args) > 1:
+        await ctx.send('args[1]:' + args[1])
         chars = list(args[1])
         for c in chars:
             if c.isdecimal():
