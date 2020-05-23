@@ -18,11 +18,6 @@ async def ping(ctx):
     await ctx.send('pong')
 
 
-#@bot.command()
-#async def hello(ctx):
-#    await ctx.send('!hello')
-
-
 @bot.command()
 async def s(ctx, *args):
     unit_surplus = {'R':2, 'B':2, 'G':4, 'S':4, 'N':4, 'L':4, 'P':18}   #飛車、角行、金将、銀将、桂馬、香車、歩兵
@@ -73,12 +68,5 @@ async def s(ctx, *args):
             result2 += k.lower()
     
     await ctx.send('.81 sfen ' + result1 + ' b ' + result2 + ' 1')
-    
-    #result3 = ''
-    #for k, v in unit_surplus.items():
-    #    result3 += k + ':' + str(v) + ','
-    #    
-    #await ctx.send(result3)
-    await ctx.send('len(args): ' + str(len(args)))
     
 bot.run(token)
