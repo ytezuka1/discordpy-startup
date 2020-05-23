@@ -29,23 +29,19 @@ async def s(ctx, *args):
     rows = 8
     for c in chars:
         if c == '/':
-            if columns > 1:
-                result1 += str(columns)
+            if columns > 1: result1 += str(columns)
             columns = 9
             rows -= 1
-        if c.isdecimal():
-            columns -= int(c)
+        if c.isdecimal(): columns -= int(c)
         x = c.upper()
         if x in unit_surplus:
             unit_surplus[x] -= 1
             columns -= 1
         result1 += c
     
-    if columns > 1:
-        result1 += str(columns)
+    if columns > 1: result1 += str(columns)
     
-    if rows > 0:
-        result1 += '/9' * rows
+    if rows > 0: result1 += '/9' * rows
         
     result2 = ''
     d = ''
@@ -53,22 +49,17 @@ async def s(ctx, *args):
         await ctx.send('args[1]:' + args[1])
         chars = list(args[1])
         for c in chars:
-            if c.isdecimal():
-                d += c
-            
+            if c.isdecimal(): d += c
             x = c.upper()
             if x in unit_surplus:
-                if not d:
-                    d = '1'
+                if not d: d = '1'
                 unit_surplus[x] -= int(d)
                 d = ''
             result2 += c
     
     for k, v in unit_surplus.items():
-        if v > 1:
-            result2 += str(v) + k.lower()
-        elif v == 1:
-            result2 += k.lower()
+        if v > 1: result2 += str(v) + k.lower()
+        elif v == 1: result2 += k.lower()
     
     await ctx.send('.81 sfen ' + result1 + ' b ' + result2 + ' 1')
     
