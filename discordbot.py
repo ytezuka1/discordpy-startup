@@ -33,6 +33,8 @@ async def s(ctx, *args):
     columns = 9
     rows = 8
     for c in chars:
+        if c.isdecimal():
+            columns -= int(c)
         if c == '/':
             if columns > 1:
                 result1 += str(columns)
