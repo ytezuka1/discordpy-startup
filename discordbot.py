@@ -23,7 +23,7 @@ async def ping(ctx):
 async def s(ctx, *args):
     unit_surplus = {'R':2, 'B':2, 'G':4, 'S':4, 'N':4, 'L':4, 'P':18, 'K':1}   #飛車、角行、金将、銀将、桂馬、香車、歩兵、玉将
     
-    chars = list(unicodedata.normalize(args[0], 'NFKC'))
+    chars = list(unicodedata.normalize('NFKC', args[0]))
     result1 = ''
     x = ''
     columns = 9
@@ -47,7 +47,7 @@ async def s(ctx, *args):
     d = ''
     if len(args) > 1:
         await ctx.send('args[1]:' + args[1])
-        chars = list(unicodedata.normalize(args[1], 'NFKC'))
+        chars = list(unicodedata.normalize('NFKC', args[1]))
         for c in chars:
             if c.isdecimal(): d += c
             x = c.upper()
