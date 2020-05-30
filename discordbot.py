@@ -30,7 +30,7 @@ async def s(ctx, *args):
     rows = 8
     for c in chars:
         if c == '/':
-            if columns > 1: result1 += str(columns)
+            if columns > 0: result1 += str(columns)
             columns = 9
             rows -= 1
         if c.isdecimal(): columns -= int(c)
@@ -46,7 +46,7 @@ async def s(ctx, *args):
     result2 = ''
     d = ''
     if len(args) > 1:
-        await ctx.send('args[1]:' + args[1])
+        #await ctx.send('args[1]:' + args[1])
         chars = list(unicodedata.normalize('NFKC', args[1]))
         for c in chars:
             if c.isdecimal(): d += c
